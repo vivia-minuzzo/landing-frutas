@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frutinhas Divertidas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fef8e7;
+      --primary: #ff6f61;
+      --accent: #f8b500;
+      --font: 'Fredoka', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: #333;
+      padding-bottom: 100px;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .fruta {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .fruta:hover {
+      transform: translateY(-5px);
+    }
+
+    .fruta img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <header>FRUTINHAS DIVERTIDAS 🍌🍎🍓🍇</header>
+
+  <button class="music-toggle" onclick="toggleMusic()">🎵 Ligar Música</button>
+  <audio id="bg-music" loop>
+    <source src="https://cdn.jsdelivr.net/gh/rafaelreis-hot/music-files/frutinhas-music.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <main class="container">
+    <div class="fruta">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt="Banana" />
+      <h2>BANANA</h2>
+      <p>As bananas são amarelas e cheias de energia! Macacos adoram bananas! 🍌</p>
+    </div>
+
+    <div class="fruta">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="Maçã" />
+      <h2>MAÇÃ</h2>
+      <p>As maçãs podem ser vermelhas, verdes ou amarelas. São crocantes e deliciosas! 🍎</p>
+    </div>
+
+    <div class="fruta">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/PerfectStrawberry.jpg" alt="Morango" />
+      <h2>MORANGO</h2>
+      <p>Moranguinhos são pequenos, vermelhos e muito doces. Que delícia! 🍓</p>
+    </div>
+
+    <div class="fruta">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Table_grapes_on_white.jpg" alt="Uva" />
+      <h2>UVA</h2>
+      <p>As uvas podem ser verdes ou roxas. São redondinhas e muito suculentas! 🍇</p>
+    </div>
+  </main>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const button = document.querySelector(".music-toggle");
+    let playing = false;
+
+    function toggleMusic() {
+      if (playing) {
+        music.pause();
+        button.textContent = "🎵 Ligar Música";
+      } else {
+        music.play();
+        button.textContent = "🔇 Desligar Música";
+      }
+      playing = !playing;
+    }
+  </script>
+</body>
+</html>
