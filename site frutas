@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descubra as Frutas - Para Crianças</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: #ff6f91;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      box-shadow: 0 4px 8px rgba(255,111,145,0.5);
+      user-select: none;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 140px;
+      margin-bottom: 1rem;
+      animation: bounce 3s infinite ease-in-out;
+    }
+    .card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+      color: #ff6f91;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .card p {
+      font-size: 1.2rem;
+      color: #666;
+      line-height: 1.4;
+      user-select: text;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .cta-section {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .cta-button {
+      background: #ff6f91;
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(255,111,145,0.4);
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    .cta-button:hover {
+      background: #e05573;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 1.5rem 1rem;
+      font-size: 1rem;
+      user-select: none;
+    }
+    /* Music control */
+    .audio-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff6f91;
+      border: none;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(255,111,145,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      user-select: none;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    .audio-control.paused {
+      background: #ccc;
+      color: #666;
+      box-shadow: none;
+    }
+    @media (max-width: 600px) {
+      header {
+        font-size: 2rem;
+        padding: 1.5rem 1rem;
+        letter-spacing: 1.5px;
+      }
+      .card h2 {
+        font-size: 1.8rem;
+      }
+      .card img {
+        width: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>Vamos Conhecer as Frutas!</header>
+
+<main>
+  <article class="card" tabindex="0" aria-label="Fruta Banana">
+    <img src="https://i.imgur.com/FNwxhBK.png" alt="Banana sorridente" />
+    <h2>BANANA</h2>
+    <p>A banana é docinha e gostosa! Ela dá muita energia! Macacos adoram banana! 🐒 A casca é amarela... mas por dentro é branquinha!</p>
+  </article>
+
+  <article class="card" tabindex="0" aria-label="Fruta Maçã">
+    <img src="https://i.imgur.com/Icv0byz.png" alt="Maçã vermelha" />
+    <h2>MAÇÃ</h2>
+    <p>A maçã pode ser vermelha, verde ou amarela! Ela é crocante: faz “CROC” quando a gente morde! É muito boa pra saúde! Tem sementinhas no meio!</p>
+  </article>
+
+  <article class="card" tabindex="0" aria-label="Fruta Morango">
+    <img src="https://i.imgur.com/0RjH5pb.png" alt="Morango dançando" />
+    <h2>MORANGO</h2>
+    <p>O morango é vermelho e cheio de pontinhos pretos! Tem um cheirinho muito gostoso! Pode comer puro ou com creme! 😋 Cresce pertinho do chão!</p>
+  </article>
+
+  <article class="card" tabindex="0" aria-label="Fruta Uva">
+    <img src="https://i.imgur.com/3bEOnk8.png" alt="Uvas roxas" />
+    <h2>UVA</h2>
+    <p>As uvas podem ser roxas, verdes ou rosadas! Crescem em cachos, juntinhas! Tem uva com e sem semente! Dá pra fazer suco de uva! 🧃</p>
+  </article>
+</main>
+
+<section class="cta-section">
+  <button class="cta-button" onclick="alert('Vamos aprender mais sobre frutas juntos!')">Quero aprender mais! 🍎🍌🍓🍇</button>
+</section>
+
+<button class="audio-control" aria-label="Tocar ou pausar música de fundo">🎵</button>
+
+<audio id="musica" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/27/audio_321f123fed.mp3?filename=children-s-joy-7013.mp3" type="audio/mpeg" />
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<footer>Feito com carinho para os pequenos exploradores das frutas! 🍎🍌🍓🍇</footer>
+
+<script>
+  // Música de fundo
+  const audio = document.getElementById('musica');
+  const audioControl = document.querySelector('.audio-control');
+
+  audioControl.addEventListener('click', () => {
+    if(audio.paused) {
+      audio.play();
+      audioControl.textContent = '🔈';
+      audioControl.classList.remove('paused');
+    } else {
+      audio.pause();
+      audioControl.textContent = '🎵';
+      audioControl.classList.add('paused');
+    }
+  });
+
+  window.addEventListener('load', () => {
+    audio.play().catch(() => {
+      audioControl.classList.add('paused');
+      audioControl.textContent = '🎵';
+    });
+  });
+</script>
+
+</body>
+</html>
